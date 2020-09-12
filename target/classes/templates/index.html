@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css"  th:href="@{/css/me.css}">  <!--这里th使用content路径 -->
+</head>
+<body>
+
+
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui contentContainer">
+         <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+             <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+             <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+             <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于</a>
+             <div class="right m-item item m-mobile-hide">
+                 <div class="ui icon inverted transparent input">
+                     <input type="text" placeholder="Search...">
+                     <i class="search link icon"></i>
+                 </div>
+             </div>
+         </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容开始------------------------------------------>
+    <div class="m-container m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui stackable grid">
+
+                <!--左边开始--------->
+                <div class="eleven wide column">
+
+                    <!--中间内容上面的导航开始 ---->
+                    <div class="ui top attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <h3 class="ui teal header">博客</h3>
+                            </div>
+                            <div class="right aligned column">
+                                共 <h2 class="ui orange header m-inline-block m-text-thin"> 14 </h2> 篇
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--content                    -->
+                    <div class="ui attached teal segment">
+
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">今天的学习记录</h3>
+                                    <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-08-19
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                            <a href="#" target="_blank" >
+                                                <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                            </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">今天的学习记录</h3>
+                                    <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-08-19
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank" >
+                                        <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">今天的学习记录</h3>
+                                    <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-08-19
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank" >
+                                        <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">今天的学习记录</h3>
+                                    <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-08-19
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank" >
+                                        <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">今天的学习记录</h3>
+                                    <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-08-19
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank" >
+                                        <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui padded vertical segment m-padded-tb-big">
+                        <div class="ui mobile reversed stackable grid">
+                            <div class="eleven wide column">
+                                <h3 class="ui header">今天的学习记录</h3>
+                                <p class="m-text">client_java是Prometheus针对JVM类开发语言的client library库，我们可以直接基于client_java用户可以快速实现独立运行的Exporter程序，也可以在我们的项目源码中集成client_java以支持Prometheus。</p>
+                                <div class="ui stackable grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                <div class="content"><a hred="#" class="header">Zhang</a></div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-08-19
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>100
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <a href="#" target="_blank" >
+                                    <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui rounded image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <!-- 中间内容底部的翻页效果开始 --->
+                        <div class="ui bottom attached segment">
+                            <div class="ui middle aligned two column grid">
+                                <div class="column">
+                                    <a href="#" class="ui mini teal basic button">上一页</a>
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" class="ui mini teal basic button">下一页</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 中间内容底部的翻页效果结束 --->
+                    </div>
+                </div>
+
+                <!--右边的top--------->
+                <div class="five wide column">
+
+                    <!-- 分类 -->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" class="item">
+                                    学习日志<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    生活日常<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    思考与感悟<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    我的生活<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习笔记<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--标签-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                知识点 <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                java <div class="detail">2</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                c++ <div class="detail">122</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                python <div class="detail">12</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                C语言 <div class="detail">32</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                计算机网络 <div class="detail">65</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                网络编程 <div class="detail">6</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
+                                计算机组成原理 <div class="detail">8</div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <!--最新推荐-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                                    <i class="bookmark icon"></i>最新推荐
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">java内存模型</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">数据库原理</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">spring boot</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">shiro</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">spring</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">netty</a>
+                        </div>
+                    </div>
+
+                    <!--二维码-->
+                    <h4 class="ui horizontal divider header m-margin-top-large">扫码关注我</h4>
+                    <div class="ui centered card" style="width: 11em">
+                        <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="rounded image" style="width: 11em"/>
+                    </div>
+            </div>
+        </div>
+     </div>
+    </div>
+
+
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" class="ui rounded image" alt="" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-lined m-text-spaced m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事（user story）</a>
+                        <a href="#" class="item">用户故事（user story）</a>
+                        <a href="#" class="item">用户故事（user story）</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header  m-text-lined m-text-spaced m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事（user story）</a>
+                        <a href="#" class="item">用户故事（user story）</a>
+                        <a href="#" class="item">用户故事（user story）</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-lined m-text-spaced m-text-spaced">介绍</h4>
+                    <p class="m-opacity-mini m-text-lined m-text-spaced m-text-spaced">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-opacity-mini m-text-lined m-text-spaced m-text-spaced .m-opacity-tiny">Copyright© 2020 - 2021 Zhang</p>
+        </div>
+
+    </footer>
+
+<!--/*/<th:block  th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+</script>
+</body>
+</html>

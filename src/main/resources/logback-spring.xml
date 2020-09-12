@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 引入SpringBoot的默认配置文件defaults.xml -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/spring.log}"/>
+    <!-- 引入SpringBoot中内置的控制台输出配置文件console-appender.xml -->
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <!--&lt;!&ndash; 引入自定义的文件输出配置文件logback-spring-file-level.xml &ndash;&gt;-->
+    <!--<include resource="logback-spring-file-level.xml" />-->
+    <appender name="TIME_FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd_HH}.%i</fileNamePattern>
+            <!-- 单个日志文件最大50MB, 保存30天的日志, 日志文件空间为2   0GB -->
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>20GB</totalSizeCap>
+
+        </rollingPolicy>
+        <!--配置日志的级别过滤器，只保留INFO Level的日志-->
+    </appender>
+
+
+    <!-- 设置root logger的级别为INFO，并将控制台输出和文件输出中的appender都添加到root logger下 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="TIME_FILE" />
+        <!--<appender-ref ref="WARN_FILE" />-->
+        <!--<appender-ref ref="ERROR_FILE" />-->
+    </root>
+    <jmxConfigurator/>
+</configuration>
