@@ -1,2 +1,2 @@
 # Blog
-MyBlog Sysytem
+MyBlog System
